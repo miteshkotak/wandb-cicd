@@ -1,3 +1,3 @@
 # wandb-cicd
 
-This is teh resource for wandb CI/CD
+This repo consist of resources for wandb CI/CD Pipeline
