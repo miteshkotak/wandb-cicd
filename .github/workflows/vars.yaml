@@ -1,0 +1,19 @@
+name: Variables
+run-name: ${{ github.actor }} is testing out Github Actions
+
+on: [push]
+jobs: 
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job is automatically trigger by a ${{ github.event_name }}"
+      - run: echo "This job is automatically trigger by a ${{ runner.os }}"
+      - run: echo "name of the branch is your repository ${{ github.ref }}"
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - run: echo "name of the branch is your repository ${{ github.repository }}"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "Job Status ${{ job.status }}"
+      
